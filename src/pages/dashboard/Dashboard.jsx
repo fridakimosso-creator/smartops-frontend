@@ -26,7 +26,7 @@ export default function Dashboard() {
 
   const fetchDashboard = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/dashboard");
+      const res = await fetch("https://smartops-backend-1.onrender.com/api/dashboard");
       const data = await res.json();
 
       setStats([

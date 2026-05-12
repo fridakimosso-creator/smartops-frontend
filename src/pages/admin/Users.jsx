@@ -15,7 +15,7 @@ export default function Users() {
   // FETCH USERS
   // =========================
   const fetchUsers = async () => {
-    const res = await fetch("http://localhost:5000/api/admin/users", {
+    const res = await fetch("https://smartops-backend-1.onrender.com/api/admin/users", {
       headers: {
         Authorization: "Bearer " + token
       }
@@ -35,7 +35,7 @@ export default function Users() {
   const createUser = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:5000/api/admin/users", {
+    const res = await fetch("https://smartops-backend-1.onrender.com/api/admin/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -71,7 +71,7 @@ export default function Users() {
   // DELETE USER
   // =========================
   const deleteUser = async (id) => {
-    await fetch(`http://localhost:5000/api/admin/users/${id}`, {
+    await fetch(`https://smartops-backend-1.onrender.com/api/admin/users/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: "Bearer " + token
@@ -85,7 +85,7 @@ export default function Users() {
   // CHANGE ROLE
   // =========================
   const changeRole = async (id, newRole) => {
-    await fetch(`http://localhost:5000/api/admin/users/${id}`, {
+    await fetch(`https://smartops-backend-1.onrender.com/api/admin/users/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

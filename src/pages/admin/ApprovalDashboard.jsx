@@ -30,11 +30,11 @@ export default function AdminApproval() {
         salesRes
       ] = await Promise.all([
 
-        fetch("http://localhost:5000/api/orders/pending-orders"),
+        fetch("https://smartops-backend-1.onrender.com/api/orders/pending-orders"),
 
-        fetch("http://localhost:5000/api/orders/pending-payments"),
+        fetch("https://smartops-backend-1.onrender.com/api/orders/pending-payments"),
 
-        fetch("http://localhost:5000/api/sales/pending")
+        fetch("https://smartops-backend-1.onrender.com/api/sales/pending")
 
       ]);
 
@@ -267,7 +267,7 @@ export default function AdminApproval() {
                     style={styles.approve}
                     onClick={() =>
                       action(
-                        `http://localhost:5000/api/orders/approve-order/${o.id}`,
+                        `https://smartops-backend-1.onrender.com/api/orders/approve-order/${o.id}`,
                         o.id,
                         "✅ Order approved",
                         setPendingOrders
@@ -286,7 +286,7 @@ export default function AdminApproval() {
                     style={styles.reject}
                     onClick={() =>
                       action(
-                        `http://localhost:5000/api/orders/reject-order/${o.id}`,
+                        `https://smartops-backend-1.onrender.com/api/orders/reject-order/${o.id}`,
                         o.id,
                         "❌ Order rejected",
                         setPendingOrders
@@ -364,7 +364,7 @@ export default function AdminApproval() {
                     style={styles.approve}
                     onClick={() =>
                       action(
-                        `http://localhost:5000/api/orders/approve-payment/${p.id}`,
+                        `https://smartops-backend-1.onrender.com/api/orders/approve-payment/${p.id}`,
                         p.id,
                         "✅ Payment approved",
                         setPendingPayments
@@ -383,7 +383,7 @@ export default function AdminApproval() {
                     style={styles.reject}
                     onClick={() =>
                       action(
-                        `http://localhost:5000/api/orders/reject-payment/${p.id}`,
+                        `https://smartops-backend-1.onrender.com/api/orders/reject-payment/${p.id}`,
                         p.id,
                         "❌ Payment rejected",
                         setPendingPayments
@@ -460,7 +460,7 @@ export default function AdminApproval() {
   style={styles.approve}
   onClick={() =>
     action(
-      `http://localhost:5000/api/sales/approve/${s.id || s.sale_id}`,
+      `https://smartops-backend-1.onrender.com/api/sales/approve/${s.id || s.sale_id}`,
       s.id || s.sale_id,
       "✅ Sale approved",
       setPendingSales
@@ -474,7 +474,7 @@ export default function AdminApproval() {
   style={styles.reject}
   onClick={() =>
     action(
-      `http://localhost:5000/api/sales/reject/${s.id || s.sale_id}`,
+      `https://smartops-backend-1.onrender.com/api/sales/reject/${s.id || s.sale_id}`,
       s.id || s.sale_id,
       "❌ Sale rejected",
       setPendingSales

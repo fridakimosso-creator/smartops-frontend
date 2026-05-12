@@ -19,7 +19,7 @@ export default function Transactions() {
       setLoading(true);
 
       const res = await fetch(
-        `http://localhost:5000/api/transactions?range=${range}`
+        `https://smartops-backend-1.onrender.com/api/transactions?range=${range}`
       );
 
       const data = await res.json();

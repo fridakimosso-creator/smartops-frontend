@@ -19,7 +19,7 @@ export default function Sales() {
   // LOAD CUSTOMERS
   // ==========================
   useEffect(() => {
-    fetch("http://localhost:5000/api/customers")
+    fetch("https://smartops-backend-1.onrender.com/api/customers")
       .then((res) => res.json())
       .then(setCustomers)
       .catch((err) => console.log(err));
@@ -67,7 +67,7 @@ export default function Sales() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/sales", {
+      const res = await fetch("https://smartops-backend-1.onrender.com/api/sales", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

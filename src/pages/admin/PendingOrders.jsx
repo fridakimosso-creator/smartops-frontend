@@ -14,7 +14,7 @@ export default function PendingOrders() {
   const fetchPending = async () => {
     try {
       const res = await fetch(
-        "http://localhost:5000/api/orders/pending-orders"
+        "https://smartops-backend-1.onrender.com/api/orders/pending-orders"
       );
       const data = await res.json();
       setOrders(data);
@@ -31,7 +31,7 @@ export default function PendingOrders() {
 
     try {
       await fetch(
-        `http://localhost:5000/api/orders/approve-order/${id}`,
+        `https://smartops-backend-1.onrender.com/api/orders/approve-order/${id}`,
         { method: "PUT" }
       );
 
@@ -51,7 +51,7 @@ export default function PendingOrders() {
 
     try {
       await fetch(
-        `http://localhost:5000/api/orders/reject-order/${id}`,
+        `https://smartops-backend-1.onrender.com/api/orders/reject-order/${id}`,
         { method: "PUT" }
       );
 

@@ -9,7 +9,7 @@ export default function PendingPayments() {
 
   const fetchPayments = async () => {
     const res = await fetch(
-      "http://localhost:5000/api/orders/pending-payments"
+      "https://smartops-backend-1.onrender.com/api/orders/pending-payments"
     );
     const data = await res.json();
     setPayments(data);
@@ -20,7 +20,7 @@ export default function PendingPayments() {
   // ==========================
   const approve = async (id) => {
     await fetch(
-      `http://localhost:5000/api/orders/approve-payment/${id}`,
+      `https://smartops-backend-1.onrender.com/api/orders/approve-payment/${id}`,
       { method: "PUT" }
     );
 
@@ -32,7 +32,7 @@ export default function PendingPayments() {
   // ==========================
   const reject = async (id) => {
     await fetch(
-      `http://localhost:5000/api/orders/reject-payment/${id}`,
+      `https://smartops-backend-1.onrender.com/api/orders/reject-payment/${id}`,
       { method: "PUT" }
     );
 

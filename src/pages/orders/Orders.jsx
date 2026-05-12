@@ -27,7 +27,7 @@ export default function Orders() {
       setError("");
 
       const res = await fetch(
-        "http://localhost:5000/api/orders"
+        "https://smartops-backend-1.onrender.com/api/orders"
       );
 
       const data = await res.json();
@@ -107,7 +107,7 @@ export default function Orders() {
       }
 
       const res = await fetch(
-        "http://localhost:5000/api/orders/payment",
+        "https://smartops-backend-1.onrender.com/api/orders/payment",
         {
           method: "POST",
           headers: {
@@ -181,7 +181,7 @@ export default function Orders() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/orders/${order.id}/delivered`,
+        `https://smartops-backend-1.onrender.com/api/orders/${order.id}/delivered`,
         {
           method: "PUT",
         }
