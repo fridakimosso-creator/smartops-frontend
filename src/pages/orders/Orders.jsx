@@ -434,15 +434,13 @@ export default function Orders() {
         </div>
 
         <button
-          onClick={() =>
-            navigate(
-              "/dashboard/orders/create"
-            )
-          }
-          style={styles.createBtn}
-        >
-          + Create Order
-        </button>
+  onClick={() =>
+    navigate("/orders/create")
+  }
+  style={styles.createBtn}
+>
+  + Create Order
+</button>
       </div>
 
       <input
